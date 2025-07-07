@@ -176,7 +176,7 @@ function AddNewTask({ fetchTodos }) {
     };
 
     try {
-      await fetch("http://localhost:3000/todos", {
+      await fetch("https://jet-trite-bun.glitch.me/todos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -296,7 +296,7 @@ function App() {
 
   async function fetchTodos() {
     try {
-      const response = await fetch("http://localhost:3000/todos", {
+      const response = await fetch("https://jet-trite-bun.glitch.me/todos", {
         method: "GET",
       });
       const result = await response.json();
@@ -309,7 +309,7 @@ function App() {
 
   async function deleteTodo(id) {
     try {
-      await fetch(`http://localhost:3000/todos/${id}`, {
+      await fetch(`https://jet-trite-bun.glitch.me/todos/${id}`, {
         method: "DELETE"
       });
       fetchTodos();
@@ -319,7 +319,7 @@ function App() {
   }
   async function editTodo(id, updatedTask) {
     try {
-      await fetch(`http://localhost:3000/todos/${id}`, {
+      await fetch(`https://jet-trite-bun.glitch.me/todos/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
